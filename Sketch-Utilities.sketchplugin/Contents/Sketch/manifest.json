@@ -1,0 +1,58 @@
+{
+  "name": "Sketch Utilities",
+  "description": "Ray's Sketch Scripts.",
+  "author": "Ray",
+  "homepage": "http://rayps.com",
+  "authorEmail" : "ray@rayps.com",
+  "version": "1.0",
+  "identifier": "com.rayps",
+  "compatibleVersion": "39.1",
+  "bundleVersion": 1,
+  "commands" : [
+    {
+      "name" : "Rename Parent Group by Selected Layer Name",
+      "identifier" : "renameParentGroupBySelectedLayerName",
+      "script" : "renameParentGroupBySelectedLayerName.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : ""
+    },
+    {
+      "name" : "Set Selected Layers Name by Sibling Text Layer Value",
+      "identifier" : "setSelectedLayersNameBySiblingTextLayerValue",
+      "script" : "setSelectedLayersNameBySiblingTextLayerValue.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : ""
+    },
+    {
+      "name" : "Set All Slices Export Group Contents Only in Document",
+      "identifier" : "setAllSlicesExportGroupContentsOnlyInDocument",
+      "script" : "setAllSlicesExportGroupContentsOnlyInDocument.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : ""
+    },
+    {
+      "name" : "Fit Width and/or Height to Parent and Switch by Each Run",
+      "identifier" : "fitToParent",
+      "script" : "fitToParent.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "cmd alt f"
+    },
+    {
+      "name" : "Test",
+      "identifier" : "test",
+      "script" : "test.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "ctrl b"
+    }
+  ],
+  "menu": {
+    "title": "$ketch Utilities",
+    "items": [
+      "renameParentGroupBySelectedLayerName",
+      "setSelectedLayersNameBySiblingTextLayerValue",
+      "setAllSlicesExportGroupContentsOnlyInDocument",
+      "fitToParent",
+      "test"
+    ]
+  }
+}

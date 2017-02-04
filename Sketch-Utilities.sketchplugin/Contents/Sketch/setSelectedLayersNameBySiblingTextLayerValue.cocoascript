@@ -1,0 +1,22 @@
+function getlayersByClass(parent, className) {
+    var predicate = NSPredicate.predicateWithFormat("className == %@", className)
+    var layers = parent.children().filteredArrayUsingPredicate(predicate)
+    return layers
+}
+
+var onRun = function(context) {
+  var doc = context.document
+  var selections = context.selection
+
+  if ( selections.count() > 0 ) {
+
+    for (var i = 0; i < selections.count(); i++) {
+      var selection = selections[i]
+      var selectionParent = selection.parentGroup()
+      var firstTextLayerStringValue = getlayersByClass(selectionParent, 'MSTextLayer').firstObject().stringValue()
+      selection.setName(firstTextLayerStringValue)
+    }
+  } else {
+    doc.showMessage(@"Please select layers")
+  }
+}
