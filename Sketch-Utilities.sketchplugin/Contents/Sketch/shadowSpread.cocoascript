@@ -1,0 +1,31 @@
+function refreshStyle() {
+  selectedLayer.setIsSelected(false)
+  selectedLayer.setIsSelected(true)
+}
+
+function createShadow(layer, x, y, blur, spread, r, g, b, a) {
+  var shadow = layer.style().addStylePartOfType(2)
+  shadow.setOffsetX(x)
+  shadow.setOffsetY(y)
+  shadow.setBlurRadius(blur)
+  shadow.setSpread(spread)
+  shadow.setColor(MSColor.colorWithRed_green_blue_alpha(r, g, b, a))
+  refreshStyle()
+}
+
+
+
+var appleDefuseShadow = function(context) {
+  var selectedLayer = context.selection[0]
+  createShadow(selectedLayer, 0, 39.275, 70, -14.275, 0, 0, 0, 0.3)
+}
+
+var createShadowWithSpread = function(context) {
+  var doc = context.document
+  var selectedLayer = context.selection[0]
+
+  var spread = doc.askForUserInput_initialValue("Input shadow spread value", -5),
+      spread = parseInt(spread)
+
+  createShadow(selectedLayer, 0, 0, 10, spread, 0, 0, 0, 0.5)
+}

@@ -1,12 +1,0 @@
-var pages = context.document.pages();
-
-for (var i = 0; i < pages.count(); i++) { 
-    var page = pages[i],
-        layers = page.children(); 
-    for (var n = 0; n < layers.count(); n++) {
-        var layer = layers[n]; 
-        if (layer.class() === MSSliceLayer) { 
-            layer.exportOptions().setLayerOptions(2); 
-        }
-    }
-}

@@ -38,11 +38,18 @@
       "shortcut" : "cmd alt f"
     },
     {
-      "name" : "Test",
-      "identifier" : "test",
-      "script" : "test.cocoascript",
-      "handler" : "onRun",
-      "shortcut" : "ctrl b"
+      "name" : "Apple Defuse Shadow",
+      "identifier" : "appleDefuseShadow",
+      "script" : "shadowSpread.cocoascript",
+      "handler" : "appleDefuseShadow",
+      "shortcut" : ""
+    },
+    {
+      "name" : "Create Shadow with Spread",
+      "identifier" : "createShadowWithSpread",
+      "script" : "shadowSpread.cocoascript",
+      "handler" : "createShadowWithSpread",
+      "shortcut" : ""
     }
   ],
   "menu": {
@@ -52,7 +59,8 @@
       "setSelectedLayersNameBySiblingTextLayerValue",
       "setAllSlicesExportGroupContentsOnlyInDocument",
       "fitToParent",
-      "test"
+      "appleDefuseShadow",
+      "createShadowWithSpread"
     ]
   }
 }
